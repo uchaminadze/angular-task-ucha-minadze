@@ -1,0 +1,54 @@
+.signin-container {
+  width: 40%;
+  max-width: 1240px;
+}
+
+.signin-header {
+  background-color: #fbfbfb;
+  padding: 0.7rem 1.2rem;
+  border: 1px solid #dee2e6;
+  border-bottom: 0;
+}
+
+.signin-header h4 {
+  margin: 0;
+}
+
+.signin-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  border: 1px solid #dee2e6;
+  padding: 1.4rem 1.2rem 1.2rem 1.2rem;
+  border-radius: 3px;
+}
+
+.custom-input {
+  border-color: #dee2e6;
+}
+
+.custom-input:focus {
+  border-color: #dee2e6;
+}
+
+.input-invalid {
+  border-color: red;
+}
+
+.input-invalid:focus {
+  border-color: red;
+}
+
+.error-text {
+  padding: 0.6rem 1.2rem;
+  margin-bottom: 25px;
+  border-radius: 3px;
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+@media (max-width: 840px) {
+  .signin-container {
+    width: 70%;
+  }
+}

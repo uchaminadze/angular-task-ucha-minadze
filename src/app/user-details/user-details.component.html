@@ -1,0 +1,28 @@
+<div class="card bg-dark text-white user-details">
+  <div class="card-badge">{{ userId }}</div>
+  <div class="background-image"></div>
+  <div class="card-img-overlay">
+    <div class="avatar-container">
+      <span class="initial-avatar">{{ userDetails?.name?.split("")[0] }}</span>
+    </div>
+    <div class="user-info">
+      <h5 class="card-title">{{ userDetails.name }}</h5>
+      <p class="card-text">{{ userDetails.email }}</p>
+    </div>
+    <div class="card-footer">
+      <div class="card-icons">
+        <span class="icon">
+          <img src="../../assets/square-facebook.svg" alt="facebook" />
+        </span>
+
+        <span class="icon">
+          <img src="../../assets/linkedin-in.svg" alt="linkedin" />
+        </span>
+
+        <span class="icon">
+          <img src="../../assets/google-plus-g.svg" alt="google" />
+        </span>
+      </div>
+    </div>
+  </div>
+</div>

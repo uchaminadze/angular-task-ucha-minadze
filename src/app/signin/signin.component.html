@@ -1,0 +1,60 @@
+<div class="container signin-container">
+  <div
+    class="alert alert-danger error-text"
+    *ngIf="isFormIncorrect"
+    role="alert"
+  >
+    username or password is incorrect
+  </div>
+  <div class="signin-header">
+    <h4>Angular Signin</h4>
+  </div>
+  <form class="row g-0 signin-form">
+    <div class="col-md-12" style="padding: 0">
+      <label for="inputUsername4" class="form-label">USERNAME</label>
+      <input
+        type="text"
+        class="form-control shadow-none custom-input"
+        [class.input-invalid]="!username.trim() && isUsernameInputFocused"
+        id="inputUsername4"
+        (keyup)="onChangeUsername($event)"
+        (blur)="onUsernameInputFocus()"
+        placeholder="username: admin"
+      />
+      <div
+        style="color: red"
+        *ngIf="!username.trim() && isUsernameInputFocused"
+      >
+        username is required
+      </div>
+    </div>
+    <div class="col-md-12" style="padding: 0">
+      <label for="inputPassword4" class="form-label">PASSWORD</label>
+      <input
+        type="password"
+        class="form-control shadow-none custom-input"
+        [class.input-invalid]="!password.trim() && isPasswordInputFocused"
+        id="inputPassword4"
+        (keyup)="onChangePassword($event)"
+        (blur)="onPasswordInputFocus()"
+        placeholder="password: admin"
+      />
+      <div
+        style="color: red"
+        *ngIf="!password.trim() && isPasswordInputFocused"
+      >
+        password is required
+      </div>
+    </div>
+    <div class="col-12" style="padding: 0">
+      <button
+        type="submit"
+        class="btn btn-primary"
+        (click)="onSubmit()"
+        [disabled]="!(username.trim() && password.trim())"
+      >
+        Signin
+      </button>
+    </div>
+  </form>
+</div>

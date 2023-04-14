@@ -1,0 +1,46 @@
+<div class="users-container">
+  <h2>Users List</h2>
+  <div class="users-table" #usersTable>
+    <table class="table table-bordered table-hover">
+      <thead>
+        <tr>
+          <th scope="col">Id.</th>
+          <th scope="col">name</th>
+          <th scope="col">username</th>
+          <th scope="col">email</th>
+          <th scope="col">website</th>
+        </tr>
+      </thead>
+      <tbody *ngFor="let user of userList">
+        <tr (mouseup)="openContextMenu($event, user.id)">
+          <td scope="row">{{ user.id }}</td>
+          <td>{{ user.name }}</td>
+          <td>{{ user.username }}</td>
+          <td>{{ user.email }}</td>
+          <td>{{ user.website }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<div
+  class="list-group"
+  [ngStyle]="contextMenuStyle"
+  (clickOutside)="closeContextMenu()"
+>
+  <button
+    type="button"
+    (click)="onClickUserDetails()"
+    class="list-group-item list-group-item-action"
+  >
+    Details
+  </button>
+  <button
+    type="button"
+    (click)="onClickDeleteUser()"
+    class="list-group-item list-group-item-action"
+  >
+    Delete
+  </button>
+</div>

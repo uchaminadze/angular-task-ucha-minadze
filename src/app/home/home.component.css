@@ -1,0 +1,19 @@
+.users-container {
+  width: 70%;
+  max-width: 1240px;
+  margin: 0 auto;
+}
+
+.users-table {
+  overflow-x: auto;
+}
+
+td{
+  cursor: pointer;
+}
+
+@media (max-width: 770px) {
+  .users-container {
+    width: 90%;
+  }
+}
