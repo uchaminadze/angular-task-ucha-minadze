@@ -9,6 +9,7 @@
 }
 
 td{
+  white-space: nowrap;
   cursor: pointer;
 }
 
